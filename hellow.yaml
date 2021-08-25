@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hellow-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hellow-deployment
+  template:
+    metadata:
+      labels:
+        app: hellow-deployment
+    spec:
+      containers:
+      - name: hellow
+        image: "gcr.io/google-samples/hello-app:1.0"
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hellow-service
+spec:
+  selector:
+    app: hellow-deployment
+  type: LoadBalancer
+  ports:
+  - port: 8080
+    targetPort: 8080
+    nodePort: 30000
+

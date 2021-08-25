@@ -1,0 +1,31 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: hellow-ingress
+  labels:
+    name: hellow-ingress
+spec:
+  tls:
+  - hosts:
+      - hellowdemo.com
+    secretName: hellowdemo
+  rules:
+  - host: hellowdemo.com
+    http:
+      
+      paths:
+      - pathType: Prefix
+        path: "/routea"
+        backend:
+          service:
+            name: hellow-service
+            port: 
+              number: 8080
+      - pathType: Prefix
+        path: "/routeb"
+        backend:
+          service:
+            name: hellow-service-2
+            port: 
+              number: 8080
+      
