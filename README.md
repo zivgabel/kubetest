@@ -1,7 +1,7 @@
 # kubetest
 prerquisite:
 1. minkube
-   1.make sure that ingress is enabled *minikube addons enable ingress*
+   1. make sure that ingress is enabled *minikube addons enable ingress*
 
 Step by step to make it run
 1. clone this repo *git clone *
