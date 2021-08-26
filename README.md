@@ -22,11 +22,11 @@ Step by step to make it run
 ## Testing
    *curl --insecure https://hellowdemo.com/routea*<br/>
    should output something like<br/>
-   `Hello, world!<br/>
+   Hello, world!<br/>
 Version: 1.0.0<br/>
-Hostname: hellow-deployment-d6d8df5bf-6zn7h<br/><br/>`
+Hostname: hellow-deployment-d6d8df5bf-6zn7h<br/><br/>
  *curl --insecure https://hellowdemo.com/routeb*<br/>
    should output something like<br/>
    Hello, world!<br/>
 Version: 2.0.0<br/>
-Hostname: hellow-deployment-2-66c9f75c8d-qvgmq<br/>'
+Hostname: hellow-deployment-2-66c9f75c8d-qvgmq<br/>
